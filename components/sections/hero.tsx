@@ -1,9 +1,11 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Download, Mail } from "lucide-react"
 import { useRef } from "react"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -84,10 +86,10 @@ export function HeroSection() {
           </motion.div>
 
           <motion.div {...scaleOnHover}>
-            <Button variant="outline" size="lg" className="group">
+            <Link href="#contact" className={cn(buttonVariants({variant:"outline",size:"lg"}),"group flex items-center")}>
               <Mail className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
               Get In Touch
-            </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
