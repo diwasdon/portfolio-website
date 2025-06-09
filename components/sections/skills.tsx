@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Code, Building } from "lucide-react"
 
+const skills=["C", "Python", "HTML", "CSS", "Nextjs", "React", "JavaScript", "TypeScript", "Tailwind CSS", "Git", "GitHub"]
+
 const fadeInLeft = {
   initial: { opacity: 0, x: -60 },
   animate: { opacity: 1, x: 0 },
@@ -61,7 +63,7 @@ export function SkillsSection() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {["C", "Python", "HTML", "CSS"].map((skill, index) => (
+                  {skills.map((skill, index) => (
                     <motion.div
                       key={skill}
                       initial={{ opacity: 0, scale: 0 }}
